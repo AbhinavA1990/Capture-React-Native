@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "SLK Capture",
+    "icon": "./slk-logo.png",
+    "sdkVersion": "25.0.0",
+    "splash": {
+      "image": "./slk-logo4.png",
+      "resizeMode":"cover"
+    },
+    "ios":{
+      "bundleIdentifier":"com.slk.capture"
+    },
+    "android":{
+      "package":"com.slk.capture"
+    }
+
+
+  }
+}
