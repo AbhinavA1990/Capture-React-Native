@@ -13,6 +13,7 @@ export const onSignOut = () => {
 };
 
 export const isSignedIn = () => {
+  debugger;
   return new Promise((resolve, reject) => {
     AsyncStorage.getItem(USER_KEY)
       .then(res => {

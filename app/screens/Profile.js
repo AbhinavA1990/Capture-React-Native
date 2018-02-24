@@ -24,7 +24,10 @@ export default ({ navigation }) => (
       <Button
         backgroundColor="#03A9F4"
         title="SIGN OUT"
-        onPress={() => onSignOut().then(() => navigation.navigate("SignedOut"))}
+        onPress={() =>{
+          onSignOut();
+          navigation.navigate("SignedOut");
+        }}
       />
     </Card>
   </View>

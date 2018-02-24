@@ -20,7 +20,8 @@ export default ({navigation}) => (
         backgroundColor="#03A9F4"
         title="Sign In"
         onPress={() => {
-          onSignIn().then(() => navigation.navigate("SignedIn"));
+          onSignIn();
+          navigation.navigate("SignedIn");
         }}
       />
       <Button
