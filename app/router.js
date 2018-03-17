@@ -53,7 +53,7 @@ export const SignedIn = TabNavigator({
     navigationOptions: {
       tabBarLabel: "Post",
       tabBarIcon: ({ tintColor }) => (
-        <FontAwesome name="Post" size={30} color={tintColor} />
+        <FontAwesome name="edit" size={30} color={tintColor} />
       )
     }
   },
@@ -62,7 +62,7 @@ export const SignedIn = TabNavigator({
     navigationOptions: {
       tabBarLabel: "Photos",
       tabBarIcon: ({ tintColor }) => (
-        <FontAwesome name="Albums" size={30} color={tintColor} />
+        <FontAwesome name="camera" size={30} color={tintColor} />
       )
     }
   }
