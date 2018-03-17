@@ -11,6 +11,9 @@ import SignIn from "./screens/SignIn";
 import Home from "./screens/Home";
 import Profile from "./screens/Profile";
 
+import Post from "./screens/Post";
+
+import Photos from "./screens/Photos"
 
 export const SignedOut = StackNavigator({
   SignIn: {
@@ -42,6 +45,24 @@ export const SignedIn = TabNavigator({
       tabBarLabel: "Profile",
       tabBarIcon: ({ tintColor }) => (
         <FontAwesome name="user" size={30} color={tintColor} />
+      )
+    }
+  },
+  Post:{
+    screen:Post,
+    navigationOptions: {
+      tabBarLabel: "Post",
+      tabBarIcon: ({ tintColor }) => (
+        <FontAwesome name="Post" size={30} color={tintColor} />
+      )
+    }
+  },
+  Photos:{
+    screen:Photos,
+    navigationOptions: {
+      tabBarLabel: "Photos",
+      tabBarIcon: ({ tintColor }) => (
+        <FontAwesome name="Albums" size={30} color={tintColor} />
       )
     }
   }

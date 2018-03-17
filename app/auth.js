@@ -26,3 +26,8 @@ export const isSignedIn = () => {
       .catch(err => reject(err));
   });
 };
+
+export  const onLoad = () =>{
+  console.log("handle lOADING TAB");
+  AsyncStorage.setItem(USER_KEY, "true");
+};

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import Component from "./screens/SignIn";
-import { SignedOut, SignedIn ,createRootNavigator} from "./router";
+import { SignedOut, SignedIn ,createRootNavigator,Profilepage,Post,Photos} from "./router";
 
 import { isSignedIn } from "./auth";
 
@@ -21,6 +21,8 @@ export default class App extends React.Component {
       .then(res => this.setState({ signedIn: res, checkedSignIn: true }))
       .catch(err => alert("An error occurred"));
   }
+
+
 
 
   render() {
