@@ -8,9 +8,10 @@ import {Icon,Item, Input} from "native-base";
 
 
 
-export default ({ navigation }) => (
-<View style={{ paddingVertical: 30 }}>
+const Post = ({ navigation }) => (
+<View style={{ paddingVertical: 30  }}>
   <Card>
+  <View>
   <View style={{ flexDirection: 'row' }}>
     <View style={{ flexDirection: 'row', height: 50}}>
       <Image style={{
@@ -26,27 +27,28 @@ export default ({ navigation }) => (
     </View>
   </View>
     <Divider style={{ marginTop: 20 ,marginBottom: 10}} />
-    <View style={{ flexDirection: 'row' }}>
-      <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+    <View style={{flexDirection: 'row', justifyContent: "space-between" }}>
+      <View style={{  height: 30, alignItems: 'center' }}>
         <FontAwesome name ="photo" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Photo</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+      <View style={{  height: 30, alignItems: 'center'}}>
         <FontAwesome name ="youtube" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Video</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+      <View style={{  height: 30, alignItems: 'center'}}>
         <FontAwesome name ="comments" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Discussion </Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+      <View style={{  height: 30, alignItems: 'center'}}>
         <FontAwesome name ="car" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Carpool</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+      <View style={{  height: 30, alignItems: 'center'}}>
         <FontAwesome name ="shopping-cart" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Buy/Sell</Text>
       </View>
+    </View>
     </View>
   </Card>
 
@@ -68,16 +70,16 @@ export default ({ navigation }) => (
     <Text style={{ marginTop :20}}> 14 Likes * 19 Comments</Text>
   </View>
     <Divider style={{ marginTop: 10 ,marginBottom: 10}} />
-    <View style={{ flexDirection: 'row' }}>
-      <View style={{ flexDirection: 'row',width: 300, height: 30,}}>
+    <View style={{ flexDirection: 'row', justifyContent: "space-between" }}>
+      <View style={{ flexDirection: 'row', height: 30,}}>
         <FontAwesome name ="thumbs-up" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Like</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 300, height: 30,}}>
+      <View style={{ flexDirection: 'row', height: 30,}}>
         <FontAwesome name ="share" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Share</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 300, height: 30,}}>
+      <View style={{ flexDirection: 'row', height: 30,}}>
         <FontAwesome name ="comments" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Comments </Text>
       </View>
@@ -86,7 +88,7 @@ export default ({ navigation }) => (
 
   <Card>
   <View>
-    <View style={{ flexDirection: 'row', height: 200}}>
+    <View style={{ flexDirection: 'row', height: 200 , justifyContent: "space-between"}}>
       <Image style={{
           width:100,
           height:80,
@@ -112,16 +114,16 @@ export default ({ navigation }) => (
     <Text style={{ marginTop :20}}> 14 Likes * 19 Comments</Text>
   </View>
     <Divider style={{ marginTop: 10 ,marginBottom: 10}} />
-    <View style={{ flexDirection: 'row' }}>
-      <View style={{ flexDirection: 'row',width: 300, height: 30,}}>
+    <View style={{ flexDirection: 'row', justifyContent: "space-between" }}>
+      <View style={{ flexDirection: 'row', height: 30,}}>
         <FontAwesome name ="thumbs-up" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Like</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 300, height: 30,}}>
+      <View style={{ flexDirection: 'row', height: 30,}}>
         <FontAwesome name ="share" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Share</Text>
       </View>
-      <View style={{ flexDirection: 'row',width: 300, height: 30,}}>
+      <View style={{ flexDirection: 'row', height: 30,}}>
         <FontAwesome name ="comments" style={{ fontSize:20, right:0}}/>
         <Text style={{ marginLeft:10, marginTop:2 }}>Comments </Text>
       </View>
@@ -130,3 +132,5 @@ export default ({ navigation }) => (
 </ScrollView>
 </View>
 );
+
+export default Post;

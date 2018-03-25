@@ -2,6 +2,18 @@ import React from "react";
 import { ScrollView, Linking, View } from "react-native";
 import { Card, Button,Text } from "react-native-elements";
 import {Header, Item, Icon, Input, Container} from "native-base"
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
+import gql from "graphql-tag";
+
+import UserList from "./FetchAllUsers";
+
+import Post from "./Post";
+
+const client = new ApolloClient({
+	uri: `https://localhost:8080/graphql`
+});
+
 
 export default ({navigation}) => (
   <View style={{ paddingVertical: 20 }}>
@@ -30,8 +42,14 @@ export default ({navigation}) => (
       >
 
         <Text style={{ color: "white", fontSize: 28 }}>AB</Text>
+
       </View>
 
     </Card>
+    <ApolloProvider client={client}>
+      <UserList />
+    </ApolloProvider>
+
+    <Post></Post>
   </View>
 );

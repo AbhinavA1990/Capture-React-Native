@@ -1,12 +1,12 @@
 
 import React, {Component} from "react";
-import { View,AppRegistry,StyleSheet,Image } from "react-native";
+import { ScrollView, View,AppRegistry,StyleSheet,Image } from "react-native";
 import { Card, Button, Text,Divider } from "react-native-elements";
 import { onSignOut, onLoad } from "../auth";
 import { FontAwesome } from "react-native-vector-icons";
 import {Header, Item, Icon, Input, Container} from "native-base"
 
-export default ({ navigation }) => (
+const Profile = ({ navigation }) => (
   <View style={{ paddingVertical: 20 }}>
   <Header searchBar rounded>
           <Item style={{ marginBottom: 15}}>
@@ -25,6 +25,7 @@ export default ({ navigation }) => (
           }}/>
 
         </Header>
+    <ScrollView >
     <Card title="Abhinav Verma">
           <Image style={{
               width:300,
@@ -43,20 +44,20 @@ export default ({ navigation }) => (
               navigation.navigate("Post");
           }}/>
           <Divider style={{ marginBottom: 10 , marginTop: 10}} />
-                <View style={{ flexDirection: 'row' }}>
-                  <View style={{ flexDirection: 'row',width: 200, height: 30,}}>
+                <View style={{ flexDirection: 'row',  justifyContent: "space-between", marginBottom : 15}}>
+                  <View style={{  height: 30, alignItems: 'center'}}>
                     <FontAwesome name ="tasks" style={{color:"#03A9F4", fontSize:30, right:0}}/>
                     <Text style={{ marginLeft:10, marginTop:5 }}>Activity Log</Text>
                   </View>
-                  <View style={{flexDirection: 'row',width: 200, height: 30,}}>
+                  <View style={{height: 30, alignItems: 'center'}}>
                     <FontAwesome name ="user" style={{color:"#03A9F4", fontSize:30, right:0}}/>
                     <Text style={{ marginLeft:10, marginTop:5  }}>Update Info</Text>
                   </View>
-                  <View style={{flexDirection: 'row',width: 200, height: 30,}}>
+                  <View style={{ height: 30, alignItems: 'center'}}>
                     <FontAwesome name ="eye" style={{color:"#03A9F4", fontSize:30, right:0}}/>
                     <Text style={{ marginLeft:10,marginTop:5  }}>View as</Text>
                   </View>
-                  <View style={{width: 200, height: 30,}}>
+                  <View style={{ height: 30, alignItems: 'center'}}>
                     <FontAwesome name ="ellipsis-h" style={{color:"#03A9F4", fontSize:30, right:0}}
                     onPress= {()=>{
                       alert("Pressed it")
@@ -98,24 +99,24 @@ export default ({ navigation }) => (
   </View>
 </View>
   <Divider style={{ marginTop: 20 ,marginBottom: 10}} />
-  <View style={{ flexDirection: 'row' }}>
-    <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+  <View style={{flexDirection: 'row', justifyContent: "space-between" }}>
+    <View style={{  height: 30, alignItems: 'center' }}>
       <FontAwesome name ="photo" style={{ fontSize:20, right:0}}/>
       <Text style={{ marginLeft:10, marginTop:2 }}>Photo</Text>
     </View>
-    <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+    <View style={{  height: 30, alignItems: 'center'}}>
       <FontAwesome name ="youtube" style={{ fontSize:20, right:0}}/>
       <Text style={{ marginLeft:10, marginTop:2 }}>Video</Text>
     </View>
-    <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+    <View style={{  height: 30, alignItems: 'center'}}>
       <FontAwesome name ="comments" style={{ fontSize:20, right:0}}/>
       <Text style={{ marginLeft:10, marginTop:2 }}>Discussion </Text>
     </View>
-    <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+    <View style={{  height: 30, alignItems: 'center'}}>
       <FontAwesome name ="car" style={{ fontSize:20, right:0}}/>
       <Text style={{ marginLeft:10, marginTop:2 }}>Carpool</Text>
     </View>
-    <View style={{ flexDirection: 'row',width: 150, height: 30,}}>
+    <View style={{  height: 30, alignItems: 'center'}}>
       <FontAwesome name ="shopping-cart" style={{ fontSize:20, right:0}}/>
       <Text style={{ marginLeft:10, marginTop:2 }}>Buy/Sell</Text>
     </View>
@@ -131,12 +132,8 @@ export default ({ navigation }) => (
    }}
  />
 </Card>
-
-
-
-
-
-
-
+  </ScrollView>
   </View>
 );
+
+export default Profile;
