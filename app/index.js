@@ -14,11 +14,6 @@ import UserList from "./screens/FetchAllUsers";
 import { isSignedIn } from "./auth";
 
 
-const client = new ApolloClient({
-	uri: `https://223.237.236.73:8080/graphql`
-});
-
-
 export default class App extends React.Component {
   constructor(props) {
       super(props);

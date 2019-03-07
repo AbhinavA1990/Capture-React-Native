@@ -11,7 +11,7 @@ import UserList from "./FetchAllUsers";
 import Post from "./Post";
 
 const client = new ApolloClient({
-	uri: `https://localhost:8080/graphql`
+	uri: 'http://172.20.10.13:8080/graphql'
 });
 
 

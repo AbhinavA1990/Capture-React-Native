@@ -8,7 +8,7 @@ function UserList({ data: { loading, allUser, error } }) {
   if(loading){
     return <Text>Loading...</Text>
   }else if(error){
-    return <Text>error...</Text>
+    return <Text>Error...</Text>
   }
   else{
     console.log(allUser);
@@ -19,9 +19,9 @@ function UserList({ data: { loading, allUser, error } }) {
 
 
 export default graphql(gql`
-  query allUser {
+  query {
+    allUser {
       userName
-      email
-      password
+    }
   }
 `)(UserList);
